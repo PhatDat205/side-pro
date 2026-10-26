@@ -5,18 +5,18 @@
 <title>Tiết kiệm của vợ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>
-:root{--bg1:#e3f3fc;--bg2:#fde9f1;--card:#fff;--tx:#3b3540;--sub:#8d7f94;--pk:#e8628f;--pk2:#f7a9c6;--sky:#6bb8e8;--hd2:#3b96cf;--soft:#fde7f0;--softsky:#e3f3fc;--line:#f3d3e1;--weekend:#b9a9c8;--yel:#ffd95a;--todbg:#3b3540;--todtx:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#1b1720;--bg2:#271a26;--card:#2d2733;--tx:#fdeaf2;--sub:#b9a3c0;--pk:#f27aa4;--soft:#3d2a3a;--softsky:#243746;--line:#4a3a4c;--weekend:#8f7fa3;--hd2:#8fd0f5;--todbg:#ffd95a;--todtx:#3b3540;color-scheme:dark}}
-:root[data-theme="dark"]{--bg1:#1b1720;--bg2:#271a26;--card:#2d2733;--tx:#fdeaf2;--sub:#b9a3c0;--pk:#f27aa4;--soft:#3d2a3a;--softsky:#243746;--line:#4a3a4c;--weekend:#8f7fa3;--hd2:#8fd0f5;--todbg:#ffd95a;--todtx:#3b3540;color-scheme:dark}
+:root{--bg1:#ffd9e8;--bg2:#fff0f6;--card:#fff;--tx:#4a2a3a;--sub:#8d7f94;--pk:#ff5c9a;--pk2:#ffb3d1;--sky:#6bb8e8;--hd2:#3b96cf;--soft:#ffdcea;--softsky:#e3f3fc;--line:#f9bfd6;--weekend:#d6a3bd;--yel:#ffd95a;--todbg:#3b3540;--todtx:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a1220;--bg2:#3a1a2e;--card:#38202f;--tx:#fdeaf2;--sub:#b9a3c0;--pk:#ff5c9a;--soft:#4a2438;--softsky:#243746;--line:#5e3048;--weekend:#8f7fa3;--hd2:#8fd0f5;--todbg:#ffd95a;--todtx:#3b3540;color-scheme:dark}}
+:root[data-theme="dark"]{--bg1:#2a1220;--bg2:#3a1a2e;--card:#38202f;--tx:#fdeaf2;--sub:#b9a3c0;--pk:#ff5c9a;--soft:#4a2438;--softsky:#243746;--line:#5e3048;--weekend:#8f7fa3;--hd2:#8fd0f5;--todbg:#ffd95a;--todtx:#3b3540;color-scheme:dark}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{min-height:100%;background:linear-gradient(170deg,var(--bg1),var(--bg2));scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0 auto;color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,sans-serif;padding:14px 14px 40px;max-width:480px}
-h1{font-size:24px;margin:6px 4px 14px}
-.card{background:var(--card);border-radius:22px;padding:16px;margin-bottom:14px;box-shadow:0 4px 18px rgba(232,98,143,.13);border-top:5px solid var(--pk2)}
-.card.sk{border-top-color:var(--sky)}
+h1{font-size:24px;margin:6px 4px 14px;color:var(--pk)}
+.card{background:var(--card);border-radius:22px;padding:16px;margin-bottom:14px;box-shadow:0 6px 22px rgba(255,92,154,.22);border-top:5px solid var(--pk2)}
+.card.sk{border-top-color:var(--pk2)}
 .card.yl{border-top-color:var(--yel)}
 .card h2{font-size:15px;margin:0 0 12px;color:var(--pk)}
-.card.sk h2{color:var(--hd2)}
+.card.sk h2{color:var(--pk)}
 label{display:block;font-size:12px;color:var(--sub);margin:0 0 4px 2px}
 input{width:100%;font-size:16px;padding:11px 12px;border:1.5px solid var(--line);border-radius:14px;background:var(--bg2);color:var(--tx);outline:none}
 input:focus{border-color:var(--sky)}
@@ -34,17 +34,17 @@ input:focus{border-color:var(--sky)}
 .hint{font-size:12px;color:var(--sub);margin-top:8px;line-height:1.4}
 .note{background:var(--soft);border-radius:16px;padding:12px 14px;margin-top:14px;font-size:15px;line-height:1.5}
 .note b{color:var(--pk)}
-.btn{width:100%;border:0;border-radius:16px;padding:14px;font-size:17px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--pk),#f59ac0);margin-top:12px;box-shadow:0 4px 12px rgba(232,98,143,.3)}
+.btn{width:100%;border:0;border-radius:16px;padding:14px;font-size:17px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--pk),#ffb3d1);margin-top:12px;box-shadow:0 4px 12px rgba(255,92,154,.3)}
 .btn:active{transform:scale(.98)}
 .saved{font-size:13px;color:var(--hd2);margin-top:8px;min-height:16px;font-weight:600}
 #logbox{max-height:280px;overflow-y:auto}
-.lg{border-radius:14px;background:var(--softsky);padding:10px 12px;margin-bottom:8px;font-size:14px;line-height:1.5}
+.lg{border-radius:14px;background:var(--soft);padding:10px 12px;margin-bottom:8px;font-size:14px;line-height:1.5}
 .lg .lt{font-size:12px;color:var(--sub);font-weight:700}
 .plus{color:#2e9e6a;font-weight:700}.minus{color:#e0455f;font-weight:700}.none{color:var(--sub)}
 .lg .ll{color:var(--pk);font-weight:700}
 .small{border:0;background:none;color:var(--sub);font-size:12px;text-decoration:underline;margin:6px 10px 0 0}
 .small[data-arm]{color:var(--pk);font-weight:700}
-.seg{display:flex;background:var(--softsky);border-radius:12px;padding:3px;margin-top:12px}
+.seg{display:flex;background:var(--soft);border-radius:12px;padding:3px;margin-top:12px}
 .seg button{flex:1;border:0;background:none;color:var(--sub);font-size:14px;font-weight:700;padding:8px;border-radius:10px}
 .seg button.on{background:var(--pk);color:#fff}
 .nav{display:flex;align-items:center;justify-content:space-between;margin:12px 0 6px;gap:6px}
@@ -56,7 +56,7 @@ input:focus{border-color:var(--sky)}
 .d{height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:14px;font-weight:700;font-size:16px;user-select:none}
 .week .d{height:84px}
 .d.we{color:var(--weekend)}
-.d.on{background:linear-gradient(150deg,var(--pk),var(--sky));color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.d.on{background:linear-gradient(150deg,var(--pk),#ff8fb8 55%,var(--sky));color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.2)}
 .d small{font-size:10px;font-weight:700;min-height:12px}
 .d.today .n{background:var(--todbg);color:var(--todtx);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center}
 .d.today.on .n{background:#fff;color:var(--pk);text-shadow:none}
@@ -82,7 +82,7 @@ input:focus{border-color:var(--sky)}
   </div>
   <div class="ringwrap">
     <div class="ring">
-      <svg viewBox="0 0 160 160"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f27aa4"/><stop offset="1" stop-color="#6bb8e8"/></linearGradient></defs><circle cx="80" cy="80" r="68" fill="none" stroke="var(--soft)" stroke-width="16"/><circle id="arc" cx="80" cy="80" r="68" fill="none" stroke="url(#rg)" stroke-width="16" stroke-linecap="round" stroke-dasharray="427.26" stroke-dashoffset="427.26" style="transition:stroke-dashoffset .5s"/></svg>
+      <svg viewBox="0 0 160 160"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5c9a"/><stop offset="1" stop-color="#6bb8e8"/></linearGradient></defs><circle cx="80" cy="80" r="68" fill="none" stroke="var(--soft)" stroke-width="16"/><circle id="arc" cx="80" cy="80" r="68" fill="none" stroke="url(#rg)" stroke-width="16" stroke-linecap="round" stroke-dasharray="427.26" stroke-dashoffset="427.26" style="transition:stroke-dashoffset .5s"/></svg>
       <div class="pct"><span id="pct">0%</span><small>hoàn thành</small></div>
     </div>
     <div class="side">
